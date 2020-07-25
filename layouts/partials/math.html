@@ -1,0 +1,72 @@
+<!-- https://geoffruddock.com/math-typesetting-in-hugo/ -->
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      macros: {
+        Th: "\\Theta",
+        th: "\\theta",
+
+        real: "\\mathbb{R}",
+        abs: ["\\lvert #1 \\rvert", 1],
+        norm: ["\\lVert #1 \\rVert", 1],
+        summ: "\\sum_{i=1}^n",
+        prodd: "\\prod_{i=1}^n",
+        expb: ["\\, \\exp\\left\\{ #1 \\right\\}", 1],
+        on: ["\\operatorname{#1}", 1],
+        bs: ["\\boldsymbol{#1}", 1],
+        mb: ["\\mathbf{#1}", 1],
+        inv: ["\\frac{1}{#1}", 1],
+
+        pp: ["\\left( #1 \\right)", 1],
+        bk: ["\\left[ #1 \\right]", 1],
+        set: ["\\left\\{ #1 \\right\\}", 1],
+
+        Var: ["\\operatorname{Var} \\left[ #1 \\right]", 1],
+        E: ["\\mathbb{E} \\left[ #1 \\right]", 1],
+        normal: ["\\mathcal{N} \\left( #1 \\right)", 1],
+        iid: "\\mathop{\\sim}^\\mathrm{iid}",
+        xdots: "x_1, \\dots, x_n",
+        ydots: "y_1, \\dots, y_n",
+        Xdots: "X_1, \\dots, X_n",
+        Ydots: "Y_1, \\dots, Y_n",
+
+        bx: "{\\mathbf{x}}",
+        by: "{\\mathbf{y}}",
+        bz: "{\\mathbf{z}}",
+        bP: "{\\mathbb{P}}",
+        bX: "{\\mathbf{X}}",
+        bY: "{\\mathbf{Y}}",
+        bbe: "{\\boldsymbol{\\beta}}",
+        bep: "{\\boldsymbol{\\epsilon}}",
+        vecx: "{\\vec{x}}",
+        vecy: "{\\vec{y}}",
+
+        T: "\\mathsf{T}",
+
+        argmin: ["\\mathop{\\mathrm{argmin}}_{#1}",1],
+        argmax: ["\\mathop{\\mathrm{argmax}}_{#1}",1]
+      }
+    },
+    options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+  });
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
