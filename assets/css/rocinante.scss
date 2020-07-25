@@ -1,7 +1,20 @@
 @import 'includes';
+@import 'custom';
 
 /* https://markdotto.com/2018/02/07/github-system-fonts/ */
 $fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+.header-link {
+  margin-left: 0.5em;
+  fill: currentColor;
+  visibility: hidden;
+}
+
+.post-content-header:hover .header-link {
+  visibility: visible;
+}
+
+/* Stock */
 
 body {
   font-family: $fonts;
@@ -29,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.625em;
+  font-size: 1.8em;
 }
 h2 {
   font-size: 1.375em;
@@ -66,21 +79,21 @@ a {
 
 ol li {
   list-style: decimal;
-  margin-left: 1.25em;
-  margin-bottom: 0.2em;
+  margin-left: 2em;
+  margin-bottom: 0.5em;
 }
 
 ul li {
   list-style: disc;
-  margin-left: 1.25em;
-  margin-bottom: 0.2em;
+  margin-left: 2em;
+  margin-bottom: 0.5em;
 }
 
 dt {
   font-weight: bold;
 }
 dd {
-  margin-left: 1.25em;
+  margin-left: 2em;
 }
 
 hr {
@@ -91,7 +104,7 @@ hr {
 
 pre, code {
   font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 code {
   background: #f9f9f9;
@@ -105,6 +118,8 @@ pre code {
   margin: 1em 0;
   padding: 0.75em 1em;
   color: inherit;
+  overflow-x: auto;
+  border-radius: 10px;
 }
 
 img, video {
@@ -136,7 +151,9 @@ blockquote {
 table {
   margin-bottom: 1em;
   width: 100%;
-  border: 1px solid #ddd;
+  // border: 1px solid #ddd;
+  display: block;
+  overflow-x: auto;
 }
 
 td, th {
@@ -154,34 +171,59 @@ tbody tr:nth-child(2n+1) td, tbody tr:nth-child(2n+1) th {
 }
 
 sup, sub {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 sup {
   vertical-align: super;
+  a {
+    text-decoration: none;
+    color: #aaa;
+    padding-left: 1px;
+  }
+
 }
 
 main {
-  max-width: 740px;
+  max-width: 800px;
   padding: 0 20px;
   margin: 0 auto;
 }
 
-header h2 {
-  margin: 1em;
-  a {
-    text-decoration: none;
-    border: none;
-    color: #77f !important;
+header {
+  max-width: 800px;
+  padding: 50px 20px;
+  margin: 0 auto;
 
-    &:hover {
-      color: #f77 !important;
-    }
+  h2 {
+    float: left;
+    font-size: 1.625em;
+    margin: auto;
 
-    &:active {
-      color: #2a2 !important;
+    a {
+      text-decoration: none;
+      border: none;
+      color: #77f !important;
+
+      &:hover {
+        color: #f77 !important;
+      }
+
+      &:active {
+        color: #2a2 !important;
+      }
     }
   }
 }
+
+nav {
+  float: right;
+  a {
+    text-decoration: none;
+    color: #5a5a5a;
+    text-transform: none;
+  }
+}
+
 
 .combined-title-pagination {
   margin-top: 2.5em;
@@ -206,7 +248,7 @@ header h2 {
     color: #888;
     margin: 0;
   }
-  margin-bottom: 1.5em;
+  margin-bottom: 0.2em;
 }
 
 footer {
@@ -215,7 +257,7 @@ footer {
     background: #eee;
     padding: 2em 0;
     .content {
-      max-width: 740px;
+      max-width: 800px;
       padding: 0 20px;
       margin: 0 auto;
     }
@@ -226,16 +268,10 @@ footer {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0.25em;
-  a {
-    border-right: 2px solid #ccc;
-    padding-right: 0.5em;
-    margin-right: 0.5em;
-  }
-  a:last-child {
-    border: none;
-  }
-  &:last-child {
-    margin-bottom: 1.25em;
+
+  a:not(:last-child)::after {
+    content: "|";
+    padding: 5px;
   }
 }
 
@@ -250,7 +286,7 @@ footer {
     }
   }
   .read-more {
-    margin-bottom: 1.25em;
+    margin-top: 1.25em;
   }
 
   padding-bottom: 1em;
@@ -259,9 +295,11 @@ footer {
 
 .tags {
   font-size: 0.9em;
+  padding-top: 10px;
+  margin-bottom: 15px;
   .links {
     display: inline;
-    margin-left: 0.5em;
+    margin-left: 0.2em;
     a {
       color: #aaa;
       text-decoration: none;
