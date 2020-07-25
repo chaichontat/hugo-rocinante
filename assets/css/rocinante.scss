@@ -21,6 +21,7 @@ body {
   color: #333;
   font-size: 16px;
   line-height: 1.6;
+  
 }
 
 p {
@@ -37,33 +38,72 @@ strong, b {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  margin-top: 1.25em;
   margin: 1.5em 0 1em 0;
   line-height: 1em;
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 2em;
 }
 h2 {
-  font-size: 1.375em;
+  font-size: 1.5em;
 }
 h3 {
-  font-size: 1.125em;
+  font-size: 1.4em;
 }
 h4 {
+  margin-top: 1.75em;
   font-size: 1em;
 }
 h5 {
-  font-size: 0.875em;
+  font-size: 1em;
 }
 h6 {
   font-size: 0.75em;
 }
 
-h4, h5, h6 {
+.content{
+  h1 {
+    border-bottom: 2px solid #d5d5d5;
+    font-size: 1.4em;
+    line-height: 1.3;
+    padding-bottom: 6px;
+  }
+
+  h2:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-top: 40px;
+    margin-bottom: 14px;
+    background: #555;
+  }
+  h2 {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+    font-size: 0.9em
+  }
+
+  h4 {
+    margin-top: 2em;
+    margin-bottom: 1.0em;
+    font-size: 0.85em;
+    font-weight: normal;
+  }
+
+}
+
+h3, h4 {
+  margin-top: 1.5em;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 2.5em;
 }
 
 a {
@@ -224,11 +264,11 @@ nav {
   }
 }
 
-
 .combined-title-pagination {
   margin-top: 2.5em;
   h1 {
     display: inline;
+    
     a {
       text-decoration: none;
       border: none;
@@ -242,6 +282,7 @@ nav {
 
 .title-group {
   .title h1 {
+    font-size: 2em;
     margin-bottom: 0.5em;
   }
   .date h5 {
