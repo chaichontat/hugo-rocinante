@@ -18,7 +18,7 @@ $fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-se
 
 body {
   font-family: $fonts;
-  color: #333;
+  color: #111;
   font-size: 16px;
   line-height: 1.6;
   
@@ -113,7 +113,6 @@ a {
 
   &:hover {
     color: #f77;
-    text-decoration: underline;
   }
 }
 
@@ -342,12 +341,11 @@ footer {
     display: inline;
     margin-left: 0.2em;
     a {
-      color: #aaa;
+      color: #999;
       text-decoration: none;
       border-bottom: none;
       &:hover {
-        color: #888;
-        text-decoration: underline;
+        color: #444;
       }
     }
   }
