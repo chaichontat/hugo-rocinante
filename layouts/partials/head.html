@@ -15,10 +15,8 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-{{ if (.Params.math) }}
-    {{ partial "math.html" . }}
-{{ end }}
 
+{{ partial "math.html" . }}
 <!-- For just-in-time text replacement. -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
