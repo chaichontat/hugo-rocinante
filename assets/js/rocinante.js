@@ -20,3 +20,13 @@
     }
   }, false);
 })(document);
+
+// Convert mermaid in code block to Hugo shortcode.
+jQuery(document).ready(function () {
+  $("code.language-mermaid").each(function (index, element) {
+    var content = $(element).html().replace(/&amp;/g, "&");
+    $(element)
+      .parent()
+      .replaceWith('<div class="mermaid" align="center">' + content + "</div>");
+  });
+});
