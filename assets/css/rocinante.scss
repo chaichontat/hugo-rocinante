@@ -45,8 +45,7 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  margin-top: 1.25em;
-  margin: 1.5em 0 1em 0;
+  margin: 1em 0 1em 0;
 }
 
 h1 {
@@ -245,8 +244,9 @@ header {
 
   h2 {
     float: left;
-    font-size: 1.625em;
+    font-size: 1.5em;
     margin: auto;
+    color: #333 !important;
 
     a {
       text-decoration: none;
@@ -266,10 +266,12 @@ header {
 
 nav {
   float: right;
+  margin-top: 8px;
   a {
     text-decoration: none;
     color: #5a5a5a;
     text-transform: none;
+    vertical-align: baseline;
   }
 }
 
@@ -292,7 +294,7 @@ nav {
 .title-group {
   .title h1 {
     font-size: 2em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
   }
   .date h5 {
     color: #888;
@@ -330,6 +332,7 @@ footer {
     color: #333;
     text-decoration: none;
     border: none;
+    font-size: 1em;
 
     &:hover {
       color: #5544ff;

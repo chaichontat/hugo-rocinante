@@ -3,8 +3,8 @@
 <script>
   MathJax = {
     tex: {
-      inlineMath: [['$', '$']],
-      displayMath: [['$$','$$']],
+      inlineMath: [["$", "$"]],
+      displayMath: [["$$", "$$"]],
       processEscapes: true,
       processEnvironments: true,
       macros: {
@@ -37,9 +37,14 @@
 
         bx: "{\\mathbf{x}}",
         by: "{\\mathbf{y}}",
+        bt: "{\\mathbf{t}}",
         bz: "{\\mathbf{z}}",
         bP: "{\\mathbb{P}}",
         bX: "{\\mathbf{X}}",
+        btheta: "{\\boldsymbol{\\theta}}",
+        bmu: "{\\boldsymbol{\\mu}}",
+        bsigma: "{\\boldsymbol{\\sigma}}",
+        bSigma: "{\\boldsymbol{\\Sigma}}",
         bY: "{\\mathbf{Y}}",
         bbe: "{\\boldsymbol{\\beta}}",
         bep: "{\\boldsymbol{\\epsilon}}",
@@ -48,25 +53,35 @@
 
         T: "\\mathsf{T}",
 
-        argmin: ["\\mathop{\\mathrm{argmin}}_{#1}",1],
-        argmax: ["\\mathop{\\mathrm{argmax}}_{#1}",1]
-      }
+        argmin: ["\\mathop{\\mathrm{argmin}}_{#1}", 1],
+        argmax: ["\\mathop{\\mathrm{argmax}}_{#1}", 1],
+
+        integer: "\\mathbb{Z}",
+        rational: "\\mathbb{Q}",
+        real: "\\mathbb{R}",
+        nat: "\\mathbb{N}",
+
+        st: "\\quad \\mathrm{s.t.} \\quad",
+      },
     },
     options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
     },
     svg: {
-      fontCache: 'global'
+      fontCache: "global",
     },
   };
 
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
+  window.addEventListener("load", (event) => {
+    document.querySelectorAll("mjx-container").forEach(function (x) {
+      x.parentElement.classList += "has-jax";
+    });
   });
 </script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+<script
+  type="text/javascript"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>

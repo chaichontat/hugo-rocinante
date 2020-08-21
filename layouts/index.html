@@ -2,7 +2,7 @@
     {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
     {{ .Scratch.Set "pagenumber" .Paginator.PageNumber }}
     {{ if eq .Paginator.PageNumber 1 }}
-        <h3 class="inline current-page">Latest</h3>
+        <p class="about-blurb">Welcome!</p>
         <!-- {{- partial "about.html" . -}} -->
     {{ else }}
         <h3 class="inline current-page">Page {{.Paginator.PageNumber}}</h3>

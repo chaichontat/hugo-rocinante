@@ -8,13 +8,13 @@ code.has-jax {
 .about-blurb {
     background-color: #eee;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 1.2em 0;
     p {
         margin: 0;
     }
     p:not(:first-child){
-        margin-top: 0.5em;
+        margin-top: 0em;
     }
 }
 
