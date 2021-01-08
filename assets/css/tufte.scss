@@ -1,0 +1,49 @@
+/* https://gertjanvandenburg.com/blog/how_i_made/ */
+
+.sidenote,
+.marginnote {
+  display: block;
+  float: right;
+  clear: right;
+  top: 0.3em;
+  margin-right: -30%;
+  width: 25%;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2rem;
+  position: relative;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  position: relative;
+  top: -0.45rem;
+  vertical-align: baseline;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #77f;
+}
+
+input.margin-toggle,
+label.margin-toggle {
+  pointer-events: none;
+}
+
+label.sidenote-number {
+  cursor: default;
+}
+
+label.margin-toggle:not(.sidenote-number) {
+  display: none;
+}
+
+input.margin-toggle {
+  display: none;
+}
